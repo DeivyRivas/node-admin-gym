@@ -1,0 +1,16 @@
+{
+  "name": "app-xtreme-gym",
+  "version": "1.0.0",
+  "description": "Aplicacion para la administracion de un Gym",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Deyvi Rivas",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "^7.3.3",
+    "uuid": "^8.3.2"
+  }
+}
