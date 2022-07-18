@@ -37,7 +37,7 @@ const main = async ()=>{
                         
             // console.log(nom, ape);
             usuarios.crearUsuario(nombre,apellidos,correo,identificacion,fechaNaci,celular,sexo)
-            console.log('*******Usuario creado con exito*******')
+            console.log('*******Usuario creado con exito******')
             break;
             case '2':
                 // carga usuarios en bases de datos
