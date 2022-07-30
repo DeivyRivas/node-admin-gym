@@ -34,10 +34,29 @@ const main = async ()=>{
             const fechaNaci = await leerMenu('fecha de nacimiento: ');
             const celular = await leerMenu('ingrese celular: ');
             const sexo = await leerMenu('ingrese sexo: ');
+            const menbrecia = await leerMenu('Que tiempo necesitas pagar: ')
+
+
+
+
+            // crear clase con esta funsion y luego exportarla aqui 
+            let ValorDia = 2500 ;
+
+            if( menbrecia){
+
+                diaclase = ( menbrecia * ValorDia );                
+            }
+
+             console.log(diaclase);
+
+
+
+
                         
             // console.log(nom, ape);
-            usuarios.crearUsuario(nombre,apellidos,correo,identificacion,fechaNaci,celular,sexo)
+            usuarios.crearUsuario(nombre,apellidos,correo,identificacion,fechaNaci,celular,sexo, diaclase)
             console.log('*******Usuario creado con exito******')
+            
             break;
             case '2':
                 // carga usuarios en bases de datos
@@ -54,6 +73,7 @@ const main = async ()=>{
             case '5':
                 const ids = await menbreciasCheckList(usuarios.listadoUsuarios);
                 usuarios.completasMenbrecias(ids);
+
                 console.log('*** MENBRECIA COMPLETADA***')
             break;
             case '6':

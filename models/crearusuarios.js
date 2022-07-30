@@ -1,5 +1,6 @@
 //se necesita de la clase Usario
 const Usuario = require('./usuario');
+// const PlanMenbrecia = require('./plangym');
 
 
 class Usuarios{
@@ -27,6 +28,7 @@ class Usuarios{
 ///////////////////////////////////////////////////////////
 //se crea usuario
 
+
     crearUsuario(
                 nombre='', 
                 apellidos='',
@@ -34,7 +36,8 @@ class Usuarios{
                 identificacion='',
                 fechaNaci='',
                 celular='',
-                sexo = ''
+                sexo = '',
+                menbrecia
     ){
 
         const usuario =  new Usuario(
@@ -44,7 +47,8 @@ class Usuarios{
                                     identificacion,
                                     fechaNaci,
                                     celular,
-                                    sexo
+                                    sexo,
+                                    menbrecia
                             );
         this._Listado[usuario.id] = usuario;
     }
@@ -94,7 +98,7 @@ menbreciasPendientesCompletadas(menbrecia = true){
         
         const { nombre, apellidos, fechaPago} = usuario;      
         const estado = (fechaPago)
-                        ? 'Membrecia esta cancelada'.green
+                        ? 'Membrecia esta cancelada por valor'.green
                         : 'Membrecia esta sin cancelar'.red;
 
         if(menbrecia){

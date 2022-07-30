@@ -11,8 +11,9 @@ class PlanGym{
 
 
 
-    constructor(diaclase, quincedias, mes){
-        this.id = uuidv4();
+    constructor(id){
+        
+        this.id = uuidv4() = id;
         this.diaclase = diaclase;
         this.quincedias = quincedias;
         this.mes = mes;

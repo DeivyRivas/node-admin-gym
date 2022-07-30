@@ -1,6 +1,5 @@
 const inquirer = require('inquirer');
-const { async } = require('rxjs');
-const { validate } = require('uuid');
+
 require('colors');
 
 
@@ -31,10 +30,6 @@ const preguntas = [
             {
                 value: '5',
                 name: `${'5.'.green} pagar menbrecia`
-            },
-            {
-                value: '6',
-                name: `${'6.'.green} Factura de Usuarios`
             },
             {
                 value: '0',
@@ -135,7 +130,6 @@ const menbreciasCheckList = async (menbrecias = [])=>{
     const { ids } = await inquirer.prompt(pregunta);
     return ids;
 }
-
 
 
 module.exports={
