@@ -12,6 +12,7 @@ const Usuarios = require('./models/crearusuarios');
 const main = async ()=>{
 
     let opt = '';
+    let valor = 0;
     const usuarios = new Usuarios();
     const infoDB = leerInformacion();
     
@@ -34,27 +35,14 @@ const main = async ()=>{
             const fechaNaci = await leerMenu('fecha de nacimiento: ');
             const celular = await leerMenu('ingrese celular: ');
             const sexo = await leerMenu('ingrese sexo: ');
-            const menbrecia = await leerMenu('Que tiempo necesitas pagar: ')
+            const menbrecia = await leerMenu('Que tiempo necesitas pagar: ');
 
+            valor = usuarios.valorPagoMenbrecia(menbrecia);
 
+            console.log('el valor a pagar es ',valor);
 
-
-            // crear clase con esta funsion y luego exportarla aqui 
-            let ValorDia = 2500 ;
-
-            if( menbrecia){
-
-                diaclase = ( menbrecia * ValorDia );                
-            }
-
-             console.log(diaclase);
-
-
-
-
-                        
             // console.log(nom, ape);
-            usuarios.crearUsuario(nombre,apellidos,correo,identificacion,fechaNaci,celular,sexo, diaclase)
+            usuarios.crearUsuario(nombre,apellidos,correo,identificacion,fechaNaci,celular,sexo, valor)
             console.log('*******Usuario creado con exito******')
             
             break;
@@ -64,19 +52,25 @@ const main = async ()=>{
             break;
             case '3':
                //usuarios con menbrecia ya cancelada
-                usuarios.menbreciasPendientesCompletadas(true);
+                usuarios.menbreciasPendientesCompletadas(true, valor);
             break;
             case '4':
                 //usuario con menbrecia pendiente de cancelar
-                usuarios.menbreciasPendientesCompletadas(false);
+                usuarios.menbreciasPendientesCompletadas(false, valor);
             break;
             case '5':
                 const ids = await menbreciasCheckList(usuarios.listadoUsuarios);
                 usuarios.completasMenbrecias(ids);
-
                 console.log('*** MENBRECIA COMPLETADA***')
+
+
             break;
             case '6':
+
+                //crear clase con esta funsion y luego exportarla aqui 
+
+                
+
                 
             break;
         

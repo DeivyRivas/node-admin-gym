@@ -1,4 +1,5 @@
 const {v4: uuidv4} = require('uuid')
+const usuarios = require('Usuarios')
 
 class PlanGym{
 
@@ -19,6 +20,8 @@ class PlanGym{
         this.mes = mes;
 
     }
+
+    
 
 }
 

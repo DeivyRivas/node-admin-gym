@@ -32,6 +32,10 @@ const preguntas = [
                 name: `${'5.'.green} pagar menbrecia`
             },
             {
+                value: '6',
+                name: `${'6.'.green} Menbrecias`
+            },
+            {
                 value: '0',
                 name: `${'0.'.green} Salir`
             },

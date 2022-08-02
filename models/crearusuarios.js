@@ -37,7 +37,7 @@ class Usuarios{
                 fechaNaci='',
                 celular='',
                 sexo = '',
-                menbrecia
+                menbrecia = menbrecia * 2500,
     ){
 
         const usuario =  new Usuario(
@@ -79,27 +79,41 @@ listadoCompletoUsaer(){
         const idx = `${i + 1}`.green;// optiene el indice de la tares
         
         //se desestructura y se saca el nombre del usuario
-        const { nombre, apellidos, celular, fechaPago} = datos;
+        const { nombre, apellidos, celular, fechaPago, menbrecia} = datos;
         //valida el estado de la tarea
         const estado = (fechaPago)
-                        ? 'Membrecia esta cancelada'.green
-                        : 'Membrecia esta sin cancelar'.red;
+                        ? `Membrecia esta cancelada VAlor: ${menbrecia}`.green
+                        : `Membrecia esta sin cancelar por valor de ${menbrecia}`.red;
         console.log(`${idx} ${nombre} ${apellidos} con tel ${celular} su :: ${estado}`);
 
     });
 }
 
+ valorPagoMenbrecia(menbrecia){
+
+    let ValorDia = 2500 ;
+
+                if( menbrecia){
+
+                    menbrecia = menbrecia * ValorDia;                
+               }
+
+    // console.log(menbrecia);
+    return menbrecia
+
+}
+
 // muestra menbrecias oendiente y completadas
-menbreciasPendientesCompletadas(menbrecia = true){
+menbreciasPendientesCompletadas(menbrecia = true, valor ){
 
     console.log();
     let contador =0;
     this.listadoUsuarios.forEach( (usuario) =>{
-        
-        const { nombre, apellidos, fechaPago} = usuario;      
+                                            //trear variable menbrecia y hacer operacion
+        const { nombre, apellidos, fechaPago,} = usuario;      
         const estado = (fechaPago)
-                        ? 'Membrecia esta cancelada por valor'.green
-                        : 'Membrecia esta sin cancelar'.red;
+                        ? `Membrecia esta cancelada por valor de: ${valor}`.green
+                        : `Membrecia esta sin cancelar por valor de: ${valor} `.red;
 
         if(menbrecia){
             //mostrar tareas completadas
@@ -139,6 +153,8 @@ completasMenbrecias(ids = []){
         }
     });
 }
+
+
 
 
 
