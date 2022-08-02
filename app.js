@@ -37,11 +37,16 @@ const main = async ()=>{
             const sexo = await leerMenu('ingrese sexo: ');
             const menbrecia = await leerMenu('Que tiempo necesitas pagar: ');
 
+            // dia: 3000
+            // semana: 15.000
+            // quincenal: 25.000
+            // mes: 40.000
+            
+
             valor = usuarios.valorPagoMenbrecia(menbrecia);
 
-            console.log('el valor a pagar es ',valor);
+            console.log(menbrecia)
 
-            // console.log(nom, ape);
             usuarios.crearUsuario(nombre,apellidos,correo,identificacion,fechaNaci,celular,sexo, valor)
             console.log('*******Usuario creado con exito******')
             

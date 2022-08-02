@@ -33,7 +33,7 @@ const preguntas = [
             },
             {
                 value: '6',
-                name: `${'6.'.green} Menbrecias`
+                name: `${'6.'.green} Vencimiento de Menbrecias `
             },
             {
                 value: '0',

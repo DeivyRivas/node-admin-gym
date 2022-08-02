@@ -89,14 +89,43 @@ listadoCompletoUsaer(){
     });
 }
 
- valorPagoMenbrecia(menbrecia){
+ valorPagoMenbrecia(menbrecia = 1){
 
-    let ValorDia = 2500 ;
 
-                if( menbrecia){
+    // dia: 3000
+    // semana: 15.000
+    // quincenal: 25.000
+    // mes: 40.000
+    let ValorDia = 3000;
+    let ValorSemanal = 15000;
+    let ValorQuincenal = 25000;
+    let ValorMes = 40000;
 
-                    menbrecia = menbrecia * ValorDia;                
-               }
+           if( menbrecia == 1){
+
+                    menbrecia = ValorDia;  
+                    console.log('escogiste 1 dia de clase', ValorDia);  
+
+            }
+            else 
+                if (menbrecia == 7 ) {
+
+                        menbrecia = ValorSemanal;
+                        console.log('escogiste una semana de clase', ValorSemanal);  
+
+                }else 
+                    if (menbrecia == 15) {
+                    
+                        menbrecia = ValorQuincenal;
+                        console.log('escogiste 15 dia de clase', ValorQuincenal);  
+
+                    } else 
+                        if (menbrecia == 30) {
+
+                        menbrecia = ValorMes;
+                        console.log('escogiste un mes de clase', ValorMes);  
+
+                    }
 
     // console.log(menbrecia);
     return menbrecia
