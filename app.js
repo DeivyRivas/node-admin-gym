@@ -32,22 +32,17 @@ const main = async ()=>{
             const apellidos = await leerMenu('Ingrese Apellido: ');
             const correo = await leerMenu('Ingrese Correo: ');
             const identificacion = await leerMenu('numero de identificacion: ');
-            const fechaNaci = await leerMenu('fecha de nacimiento: ');
+            const fechaNaci = await leerMenu('fecha de nacimiento (D-MM-AAA): ');
             const celular = await leerMenu('ingrese celular: ');
-            const sexo = await leerMenu('ingrese sexo: ');
-            const menbrecia = await leerMenu('Que tiempo necesitas pagar: ');
+            const sexo = await leerMenu('ingrese sexo ( H o M): ');
+            const plan = await leerMenu('Que tiempo necesitas pagar (1, 7, 15, 30 ): ');
 
-            // dia: 3000
-            // semana: 15.000
-            // quincenal: 25.000
-            // mes: 40.000
+            let plans = plan;
+            valor = usuarios.valorPagoMenbrecia(plans);
+
+
+            usuarios.crearUsuario(nombre,apellidos,correo,identificacion,fechaNaci,celular,sexo,valor,plan)
             
-
-            valor = usuarios.valorPagoMenbrecia(menbrecia);
-
-            console.log(menbrecia)
-
-            usuarios.crearUsuario(nombre,apellidos,correo,identificacion,fechaNaci,celular,sexo, valor)
             console.log('*******Usuario creado con exito******')
             
             break;
@@ -72,9 +67,7 @@ const main = async ()=>{
             break;
             case '6':
 
-                //crear clase con esta funsion y luego exportarla aqui 
-
-                
+                usuarios.fechaVencido();
 
                 
             break;

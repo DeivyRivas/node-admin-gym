@@ -37,7 +37,8 @@ class Usuarios{
                 fechaNaci='',
                 celular='',
                 sexo = '',
-                menbrecia = menbrecia * 2500,
+                menbrecia = '',
+                plan = '',
     ){
 
         const usuario =  new Usuario(
@@ -48,7 +49,8 @@ class Usuarios{
                                     fechaNaci,
                                     celular,
                                     sexo,
-                                    menbrecia
+                                    menbrecia,
+                                    plan,
                             );
         this._Listado[usuario.id] = usuario;
     }
@@ -89,7 +91,7 @@ listadoCompletoUsaer(){
     });
 }
 
- valorPagoMenbrecia(menbrecia = 1){
+ valorPagoMenbrecia(menbrecia ){
 
 
     // dia: 3000
@@ -104,26 +106,26 @@ listadoCompletoUsaer(){
            if( menbrecia == 1){
 
                     menbrecia = ValorDia;  
-                    console.log('escogiste 1 dia de clase', ValorDia);  
+                         
 
             }
             else 
                 if (menbrecia == 7 ) {
 
                         menbrecia = ValorSemanal;
-                        console.log('escogiste una semana de clase', ValorSemanal);  
+                    
 
                 }else 
                     if (menbrecia == 15) {
                     
                         menbrecia = ValorQuincenal;
-                        console.log('escogiste 15 dia de clase', ValorQuincenal);  
+                        
 
                     } else 
                         if (menbrecia == 30) {
 
                         menbrecia = ValorMes;
-                        console.log('escogiste un mes de clase', ValorMes);  
+                          
 
                     }
 
@@ -181,6 +183,35 @@ completasMenbrecias(ids = []){
             this._Listado[usuario.id].fechaPago = null;
         }
     });
+}
+
+
+fechaVencido(){
+
+    let contador =0;
+    this.listadoUsuarios.forEach(((fechaPagoMenbre) =>{
+
+        const { nombre, apellidos, fechaPago, menbrecia, plan} = fechaPagoMenbre;
+        const estado = (fechaPago)
+                        ? `fecha de vencimiento es: ${(fechaPago + plan)}`.blue
+                        : `Membrecia sin fecha de vencimiento:`.red;
+
+                        if(fechaPago){
+                            //mostrar tareas completadas
+                            if(menbrecia){
+                                contador+=1;
+                                console.log(`${contador.toString().green}. ${nombre} ${apellidos} :: Su ${estado} ::::::::::___________`);
+                            }
+                        }else{
+                            //mostrar tareas pendientes
+                            if(!fechaPago){
+                                contador+=1;
+                                console.log(`${contador.toString().green}. ${nombre} ${apellidos} :: Su ${estado}`);
+                            }
+                        }
+    }))
+    
+
 }
 
 

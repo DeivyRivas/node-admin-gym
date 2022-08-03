@@ -14,6 +14,7 @@ class Usuario{
     sexo = Date;
     fechaPago = null;
     menbrecia = 0 ;
+    plan = '';
 
     constructor(
                 nombre, 
@@ -24,7 +25,10 @@ class Usuario{
                 celular,
                 sexo,
                 menbrecia,
-                fechaPago
+                plan,
+                
+                
+
                 
     ){
         this.id = uuidv4();
@@ -37,6 +41,7 @@ class Usuario{
         this.sexo = sexo;
         this.menbrecia = menbrecia;
         this.fechaPago = null ;
+        this.plan = plan;
         
 
     }

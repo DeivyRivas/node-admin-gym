@@ -1,26 +1,15 @@
 [
     {
-        "id": "32c2ed9c-a413-457e-8ff2-8bc9e588cf85",
-        "nombre": "DEYVI",
-        "apellidos": "RIVAS",
-        "correo": "RIVAS999@GMAIL.COM",
-        "cedula": "1143997881",
-        "fechaNacimineto": "24-11-1999",
-        "celular": "3137651467",
-        "sexo": "HOMBRE",
-        "fechaPago": null,
-        "menbrecia": 40000
-    },
-    {
-        "id": "9400162e-4035-4cf1-bab2-52188a22fb13",
-        "nombre": "ana",
-        "apellidos": "ruiz",
-        "correo": "ruiz.com",
-        "cedula": "66955440",
-        "fechaNacimineto": "08-061945",
-        "celular": "3104372698",
-        "sexo": "mujer",
-        "fechaPago": null,
-        "menbrecia": 25000
+        "id": "e3375912-590f-40c8-a8b6-fffe2e71fc93",
+        "nombre": "ALEXANDRA",
+        "apellidos": "CAMPO",
+        "correo": "ALEXANDRA62@GMAIL.COM",
+        "cedula": "1003036471",
+        "fechaNacimineto": "26-09-2000",
+        "celular": "3217400713",
+        "sexo": "M",
+        "fechaPago": "Tue Aug 02 2022",
+        "menbrecia": 40000,
+        "plan": "30"
     }
 ]
