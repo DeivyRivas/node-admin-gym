@@ -21,19 +21,19 @@ const preguntas = [
             },
             {
                 value: '3',
-                name: `${'3.'.green} Usuarios con menbresia cancelada`
+                name: `${'3.'.green} Usuarios con membresia cancelada`
             },
             {
                 value: '4',
-                name: `${'4.'.green} Usuarios con menbresia pendiente`
+                name: `${'4.'.green} Usuarios con membresia pendiente`
             },
             {
                 value: '5',
-                name: `${'5.'.green} pagar menbrecia`
+                name: `${'5.'.green} pagar membresia`
             },
             {
                 value: '6',
-                name: `${'6.'.green} Vencimiento de Menbrecias `
+                name: `${'6.'.green} Vencimiento de Membresias `
             },
             {
                 value: '0',
@@ -112,7 +112,7 @@ const menbreciasCheckList = async (menbrecias = [])=>{
         const idx = `${i + 1}`.green;
         return{
             value: menbrecia.id,
-            name: `${idx}. ${menbrecia.nombre}`,
+            name: `${idx}. ${menbrecia.nombre} ${menbrecia.apellidos}`,
             checked: (menbrecia.fechaPago)
                         ? true
                         : false,

@@ -7,7 +7,7 @@ const Usuarios = require('./models/crearusuarios');
 
 
 
-
+console.clear();
 
 const main = async ()=>{
 
@@ -28,22 +28,23 @@ const main = async ()=>{
         switch (opt) {
             case '1':
 
-            const nombre = await leerMenu('Ingrese Nombre: ');
-            const apellidos = await leerMenu('Ingrese Apellido: ');
-            const correo = await leerMenu('Ingrese Correo: ');
-            const identificacion = await leerMenu('numero de identificacion: ');
-            const fechaNaci = await leerMenu('fecha de nacimiento (D-MM-AAA): ');
+            const nombre = await leerMenu('Ingrese Nombres: ');
+            const apellidos = await leerMenu('Ingrese Apellidos: ');
+            const correo = await leerMenu('Ingrese Correo Electronico: ');
+            const identificacion = await leerMenu('Numero de identificacion: ');
+            const fechaNaci = await leerMenu('Fecha de nacimiento (DD-MM-AAAA): ');
             const celular = await leerMenu('ingrese celular: ');
             const sexo = await leerMenu('ingrese sexo ( H o M): ');
             const plan = await leerMenu('Que tiempo necesitas pagar (1, 7, 15, 30 ): ');
 
             let plans = plan;
+
             valor = usuarios.valorPagoMenbrecia(plans);
 
 
             usuarios.crearUsuario(nombre,apellidos,correo,identificacion,fechaNaci,celular,sexo,valor,plan)
             
-            console.log('*******Usuario creado con exito******')
+            console.log('******* Usuario creado con exito ******'.bgCyan);
             
             break;
             case '2':
@@ -61,7 +62,8 @@ const main = async ()=>{
             case '5':
                 const ids = await menbreciasCheckList(usuarios.listadoUsuarios);
                 usuarios.completasMenbrecias(ids);
-                console.log('*** MENBRECIA COMPLETADA***')
+
+                console.log('*** MEMBRESIA COMPLETADA***'.bgCyan);
 
 
             break;

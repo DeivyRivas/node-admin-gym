@@ -1,15 +1,1 @@
-[
-    {
-        "id": "e3375912-590f-40c8-a8b6-fffe2e71fc93",
-        "nombre": "ALEXANDRA",
-        "apellidos": "CAMPO",
-        "correo": "ALEXANDRA62@GMAIL.COM",
-        "cedula": "1003036471",
-        "fechaNacimineto": "26-09-2000",
-        "celular": "3217400713",
-        "sexo": "M",
-        "fechaPago": "Tue Aug 02 2022",
-        "menbrecia": 40000,
-        "plan": "30"
-    }
-]
+[{"id":"65f83dd7-04e0-47f4-bb64-53ef5f337d7c","nombre":"aliz","apellidos":"berrio","correo":"alizberrio01@gmail.com","cedula":"1003034554","fechaNacimineto":"12-07-1999","celular":"3217500860","sexo":"m","fechaPago":"Wed Aug 03 2022 23:02:27 GMT-0500 (hora estándar de Colombia)","menbrecia":40000,"plan":"30"},{"id":"65304da9-96b8-47aa-a53f-a318c1a9b1b4","nombre":"maryin alexandra","apellidos":"campo campo","correo":"alexa62@gmail.com","cedula":"123457896","fechaNacimineto":"26-09-200","celular":"3217400713","sexo":"M","fechaPago":"Wed Aug 03 2022 23:06:44 GMT-0500 (hora estándar de Colombia)","menbrecia":15000,"plan":"7"}]

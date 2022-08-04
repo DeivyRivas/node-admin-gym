@@ -7,11 +7,11 @@ class Usuario{
     id = '';
     nombre ='';
     apellidos = '';
-    correo ='';
+    correo = '';
     cedula = '';
-    fechaNacimineto = Date;
+    fechaNacimineto = [];
     celular = '';
-    sexo = Date;
+    sexo = '';
     fechaPago = null;
     menbrecia = 0 ;
     plan = '';
@@ -26,7 +26,7 @@ class Usuario{
                 sexo,
                 menbrecia,
                 plan,
-                
+                fechaPago,
                 
 
                 
@@ -40,7 +40,7 @@ class Usuario{
         this.celular = celular;
         this.sexo = sexo;
         this.menbrecia = menbrecia;
-        this.fechaPago = null ;
+        this.fechaPago = null;
         this.plan = plan;
         
 

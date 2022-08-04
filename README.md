@@ -12,10 +12,10 @@ Aplicacion de consola administracion de un gym con Node.js
 ? ¿ QUE DESEAS REALIZAR ? (Use arrow keys)
 > 1. Registrar Usuario
   2. listado de Usuarios
-  3. Usuarios con menbresia cancelada
-  4. Usuarios con menbresia pendiente
-  5. pagar menbrecia
-  6. Factura de Usuarios
+  3. Usuarios con membresia cancelada
+  4. Usuarios con membresia pendiente
+  5. pagar membresia
+  6. Vencimiento de Membresias
   0. Salir
 
 

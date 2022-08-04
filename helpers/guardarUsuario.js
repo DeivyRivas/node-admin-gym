@@ -8,6 +8,7 @@ const guardarDB = ( data ) =>{
     //const DatosUsuario = './db/data.json';
 
     fs.writeFileSync(DatosUsuario, JSON.stringify(data));
+    // fs.writeFileSync(DatosUsuario, data);
     
 
 }

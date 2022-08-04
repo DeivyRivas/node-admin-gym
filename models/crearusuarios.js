@@ -86,6 +86,7 @@ listadoCompletoUsaer(){
         const estado = (fechaPago)
                         ? `Membrecia esta cancelada VAlor: ${menbrecia}`.green
                         : `Membrecia esta sin cancelar por valor de ${menbrecia}`.red;
+
         console.log(`${idx} ${nombre} ${apellidos} con tel ${celular} su :: ${estado}`);
 
     });
@@ -93,11 +94,6 @@ listadoCompletoUsaer(){
 
  valorPagoMenbrecia(menbrecia ){
 
-
-    // dia: 3000
-    // semana: 15.000
-    // quincenal: 25.000
-    // mes: 40.000
     let ValorDia = 3000;
     let ValorSemanal = 15000;
     let ValorQuincenal = 25000;
@@ -129,19 +125,19 @@ listadoCompletoUsaer(){
 
                     }
 
-    // console.log(menbrecia);
+    
     return menbrecia
 
 }
 
 // muestra menbrecias oendiente y completadas
-menbreciasPendientesCompletadas(menbrecia = true, valor ){
+menbreciasPendientesCompletadas(menbrecia = true, valor){
 
     console.log();
     let contador =0;
     this.listadoUsuarios.forEach( (usuario) =>{
                                             //trear variable menbrecia y hacer operacion
-        const { nombre, apellidos, fechaPago,} = usuario;      
+        const { nombre, apellidos, fechaPago} = usuario;      
         const estado = (fechaPago)
                         ? `Membrecia esta cancelada por valor de: ${valor}`.green
                         : `Membrecia esta sin cancelar por valor de: ${valor} `.red;
@@ -173,7 +169,8 @@ completasMenbrecias(ids = []){
         const menbrecia = this._Listado[id];
 
         if(!menbrecia.fechaPago){
-            menbrecia.fechaPago = new Date().toDateString()
+
+            menbrecia.fechaPago = new Date().toString()
         }
     });
 
@@ -193,14 +190,14 @@ fechaVencido(){
 
         const { nombre, apellidos, fechaPago, menbrecia, plan} = fechaPagoMenbre;
         const estado = (fechaPago)
-                        ? `fecha de vencimiento es: ${(fechaPago + plan)}`.blue
-                        : `Membrecia sin fecha de vencimiento:`.red;
+                        ? `fecha de vencimiento es: en ${plan} dias `.blue
+                        : `Membresia sin fecha de vencimiento:`.red;
 
                         if(fechaPago){
                             //mostrar tareas completadas
                             if(menbrecia){
                                 contador+=1;
-                                console.log(`${contador.toString().green}. ${nombre} ${apellidos} :: Su ${estado} ::::::::::___________`);
+                                console.log(`${contador.toString().green}. ${nombre} ${apellidos} :: Su ${estado}`);
                             }
                         }else{
                             //mostrar tareas pendientes
@@ -215,13 +212,6 @@ fechaVencido(){
 }
 
 
-
-
-
-
-
 }
-
-
 
 module.exports = Usuarios;
